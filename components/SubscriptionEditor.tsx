@@ -17,7 +17,7 @@ import {
   InputAdornment,
   Slide
 } from '@mui/material';
-import { TransitionProps } from '@mui/material/transitions';
+import type { TransitionProps } from '@mui/material/transitions';
 import { cn } from '../lib/utils';
 
 interface Props {
