@@ -22,6 +22,11 @@ const Root = () => {
 
     const [path, setPath] = useState(getHashPath());
 
+    const navigate = (newPath: string) => {
+        window.location.hash = newPath;
+        window.scrollTo(0, 0);
+    };
+
     useEffect(() => {
         const onHashChange = () => setPath(getHashPath());
         window.addEventListener('hashchange', onHashChange);
@@ -34,11 +39,6 @@ const Root = () => {
         
         return () => window.removeEventListener('hashchange', onHashChange);
     }, []);
-
-    const navigate = (newPath: string) => {
-        window.location.hash = newPath;
-        window.scrollTo(0, 0);
-    };
 
     const handleGoogleLogin = async () => {
         try {

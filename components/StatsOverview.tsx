@@ -1,9 +1,9 @@
 import React from 'react';
 import { Subscription, Currency } from '../types';
-import { formatCurrency, getDaysRemaining, getMonthlyCostInBase } from '../lib/utils';
+import { formatCurrency, getMonthlyCostInBase } from '../lib/utils';
 import { Icons } from './Icons';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as ReTooltip, BarChart, Bar, XAxis, YAxis } from 'recharts';
-import { Card, CardContent, Typography, useTheme, LinearProgress } from '@mui/material';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as ReTooltip } from 'recharts';
+import { Card, CardContent, Typography, useTheme } from '@mui/material';
 
 interface Props {
   subscriptions: Subscription[];
